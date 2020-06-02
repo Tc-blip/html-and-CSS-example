@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+
+        h1{
+            color: green;
+        }
+        /* id选择器
+            作用：根据元素id属性值选中一个元素
+            语法 #id属性值｛｝
+            例子 #box #red
+         */
+        #grey{
+            color: blueviolet;
+        }
+
+        /* 
+            将 秋水。。。 和落霞。。 设为蓝色
+            通过 class标签属性
+                和id类似，不同的是class可以重复使用
+            类选择器
+                作用，根据元素的class选择一组元素
+                语法 .class属性值
+                css 中用 ‘.’开头
+        */
+        
+        .blue{
+            color: blue;
+        }
+        .foont{
+            font-size: 50px;
+        }
+        /* 统配选择器
+            作用选中页面中所有元素
+            语法  ： *
+        */
+        *{
+            color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>标题</h1>
+    <p>少小离家老大回</p>
+    <p>乡音无改鬓毛衰</p>
+    <p id="grey">儿童相见不相识</p>
+    <p>笑问客从何处来</p>
+    <p class="blue foont">秋水共长天一色</p>
+    <p class="blue">落霞与孤鹜齐飞</p>
+</body>
+</html>
