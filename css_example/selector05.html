@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            Attribute selector 属性选择器
+            [属性名] 选择含有制定属性的元素
+            [属性名 = 属性值] 选择还有制定属性和属性值的元素
+            [属性名^=属性值] 选择属性值以指定值开头的
+            [属性名$=属性值] 选择属性以制定结尾的元素
+            [属性名*=属性值] 选择属性中含有某值的的元素的元素
+        */
+        p[title] {
+            color: orange;
+        }
+        p[title=hello] {
+            color: red;
+        }
+        p[title*="llo"]{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>标题</h1>
+    <p title="abc">少小离家老大回</p>
+    <p title="ac">乡音无改鬓毛衰</p>
+    <p title="hello">儿童相见不相识</p>
+    <p title="hellowww">笑问客从何处来</p>
+    <p>秋水共长天一色</p>
+    <p>落霞与孤鹜齐飞</p>
+</body>
+</html>

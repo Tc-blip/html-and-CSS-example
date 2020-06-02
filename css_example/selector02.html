@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            交集选择器：
+                作用，同时复合多个条件的元素
+                语法：选择器1 选择器2 选择器3，选择器n{}
+                注意点：
+                    交集选择器中，如果有元素选择器，必须使用元素选择器开头
+        */
+        .red{
+            color: red;
+        }
+
+        div.red{
+            font-size: 60px;
+        }
+        .a.b.c{
+            color: blue;
+        }
+
+        /* 选择器分组（并集选择器）
+            作用：同时选择多个选择器对应 元素
+            语法：选择器1，选择器2，选择器3，选择器n{ }
+        */
+        h1,span{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="red">im div</div>
+    <p class="red">im p </p>
+    <div class="red2 a b c"> div2</div>
+    
+    <h1>IM h1</h1>
+    <span> im span</span>
+</body>
+</html>

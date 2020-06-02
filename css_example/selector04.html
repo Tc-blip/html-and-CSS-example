@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            后代元素选择器 Descendant combinator 
+                作用:选中制定元素内的后代元素
+                祖先 后代{}
+        */
+
+        /* 
+            兄弟选择器： Adjacent sibling combinator
+                作用选择下一个兄弟
+                语法： 前一个+下一个 
+                    注意只能紧挨着
+                选择下面所有兄弟 
+                语法2： 兄 ~弟
+        */
+        div a{ 
+           color:blue; 
+        }
+        p+span{
+            color: orange;
+        }
+        p~span{
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>div中的p</p> 
+        <span>div中 第一个span</span>
+        <span>div中 第二个span</span>
+        <a>
+            div中的a
+        </a>
+        
+    </div>
+    
+</body>
+</html>

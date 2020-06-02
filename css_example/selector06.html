@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            将ul里面第一个li设置为红色
+            第一种方法：
+                给第一个li一个class='first'
+                然后 ul>li.first
+                问题： 只能特定，不能自动选中第一个元素
+            第二种方法： 伪类（不存在的类，特殊类）
+                -用来描述一个元素的特殊状态
+                    比如：第一个子元素，比如被点击的元素，比如鼠标移入的元素..
+                -一半伪类都是用 ：开头
+                    ：first-child 第一个
+                    : last-child 最后一个
+                    :nth-child 第几个 
+                        -特殊值写n个：零到正无穷
+                        -2n 选中偶数位的值 even 也行
+                        -2n+1 选中奇数位的元素  odd也行
+                    :first-of-type
+                    :last-of-type
+                    :nth-last-of-type()
+                        -找同类型的第一个，其他和上面一样
+                    :not() 否定伪类
+                        - 
+        */
+        ul>li:first-child{
+            color:red;
+        }
+        ul>li:last-child{
+            color: blue;
+        }
+        ul>li:nth-child(4){
+            color:green
+        }
+        ul.sec>li:not(:nth-of-type(3)){
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul 无序列表 
+        快速写 子类标签  输入 ul>li 就生成 嵌套了
+        ul>li*5 生成五个
+    -->
+    <ul>
+        <!-- 第一个元素是span的话 就影响了 第一个元素不是li 就不行
+             是根据所有元素进行排序的
+             first-child必须是所有元素中的第一个
+            <span>我是span</span> 
+        -->
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+
+    <ul class="sec">
+        <li>sec 第一个</li>
+        <li>sec 第二个</li>
+        <li>sec 第三个</li>
+        <li>sec 第四个</li>
+    </ul>
+</body>
+</html>
